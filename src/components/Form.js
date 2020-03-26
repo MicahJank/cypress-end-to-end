@@ -121,6 +121,7 @@ export default function Form() {
       <label htmlFor='motivation'>
         Why would you like to help?
         <textarea
+          data-cy='textarea'
           name='motivation'
           value={formState.motivation}
           onChange={inputChange}
@@ -149,7 +150,7 @@ export default function Form() {
       </label>
       {/* displaying our post request data */}
       <pre>{JSON.stringify(post, null, 2)}</pre>
-      <button disabled={buttonDisabled}>Submit</button>
+      <button type='submit' disabled={buttonDisabled}>Submit</button>
     </form>
   );
 }
